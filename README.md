@@ -140,7 +140,7 @@ All benchmarks are run from a fixed random seed (`torch.manual_seed(0)`) for rep
 
 **Setup:** 10-dimensional bowl `f(x) = ½ xᵀQx`, eigenvalues spread in `[1, 10]`, `lr = 0.05`, target `f(x) < 1e-6`.
 
-![Well-conditioned quadratic convergence](assets/quad_well.png)
+![Well-conditioned quadratic convergence](assets/quad_well.png) 
 
 | Optimizer | Iterations to converge | Speedup vs Adam |
 |-----------|:---------------------:|:---------------:|
