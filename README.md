@@ -156,7 +156,7 @@ CAAM+ is **2.9× faster than Adam** on a well-conditioned bowl. The adaptive LR 
 
 **Setup:** Same as above but eigenvalues spread in `[1, 50]`, `lr = 0.02` (reduced to maintain stability), target `f(x) < 1e-6`, max 20,000 steps.
 
-![Ill-conditioned quadratic convergence](assets/quad_ill.png)
+![Ill-conditioned quadratic convergence](quad_ill.png)
 
 | Optimizer | Iterations to converge | Speedup vs Adam |
 |-----------|:---------------------:|:---------------:|
@@ -174,7 +174,7 @@ Under high curvature, Adam suffers from slow convergence due to conservative per
 
 **Setup:** `f(x, y) = (1 − x)² + 100(y − x²)²`, starting at `(−1.2, 1.0)`, `lr = 0.002` (CAAM+/Adam) / `0.001` (SGD), target `f < 1e-4`, max 100,000 steps.
 
-![Rosenbrock convergence](assets/rosenbrock.png)
+![Rosenbrock convergence](rosenbrock.png)
 
 | Optimizer | Iterations to converge |
 |-----------|:---------------------:|
@@ -192,7 +192,7 @@ The Rosenbrock narrow valley is the natural home of heavy-ball momentum — SGD 
 
 #### Training Loss Curve
 
-![MNIST training loss](assets/mnist_loss.png)
+![MNIST training loss](mnist_loss.png)
 
 | Epoch | CAAM+ | Adam | SGD+Momentum |
 |:-----:|:-----:|:----:|:------------:|
@@ -206,7 +206,7 @@ CAAM+ reaches a **2.4× lower final training loss** than Adam by epoch 20 (0.004
 
 #### Test Accuracy & Training Time
 
-![MNIST accuracy and time](assets/mnist_bars.png)
+![MNIST accuracy and time](mnist_bars.png)
 
 | Optimizer | Test Accuracy | Training Time (CPU) |
 |-----------|:-------------:|:-------------------:|
@@ -220,7 +220,7 @@ All three achieve comparable accuracy (~97.6–98.0%). CAAM+'s per-step overhead
 
 ### Summary
 
-![Convergence speed comparison](assets/convergence_bar.png)
+![Convergence speed comparison](convergence_bar.png)
 
 | Benchmark | CAAM+ | Adam | SGD+Momentum |
 |-----------|:-----:|:----:|:------------:|
